@@ -44,4 +44,4 @@ async def latency(request: Request):
             "avg_uptime": float(uptime_values.mean()),
             "breaches": int((latency_values > threshold).sum())
         })
-    return results
+    return {"regions": results}
